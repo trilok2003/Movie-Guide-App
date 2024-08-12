@@ -6,14 +6,14 @@ const inputBox = document.querySelector(".inputBox");
 const getMovieInfo = async (movie)=>{
     try{
         const myApiKey = "8593bdff";
-        const url = `http://www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`;
+        const url = `//www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`;
 
         const response = await fetch(url);
         if(!response.ok){
             throw new Error("Unable to fetch movie data.")
         }
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
 
     showMovieData(data);
     }
